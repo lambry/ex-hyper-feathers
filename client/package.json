@@ -1,0 +1,25 @@
+{
+  "name": "ex-feathers-client",
+  "version": "0.1.0",
+  "main": "src",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "NODE_ENV=production parcel build index.html",
+    "eslint": "eslint src/"
+  },
+  "dependencies": {
+    "@feathersjs/authentication-client": "^1.0.2",
+    "@feathersjs/feathers": "^3.0.5",
+    "@feathersjs/socketio-client": "^1.0.2",
+    "hyperapp": "^1.0.2",
+    "socket.io-client": "^2.0.4"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.16.0",
+    "node-sass": "^4.7.2",
+    "parcel-bundler": "^1.4.1"
+  }
+}

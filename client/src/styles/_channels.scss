@@ -1,0 +1,48 @@
+.channels {
+    display: flex;
+    flex-direction: column;
+    color: $white;
+    background-color: $black;
+}
+
+.channel {
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: background-color $transition;
+    &[data-active=true] {
+        background-color: rgba(0, 0, 0, 0.25);
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.275);
+        }
+    }
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    &-toggle {
+        display: block;
+        text-align: center;
+        font-size: 0.75rem;
+        padding: 2.5rem 1.5rem 1.5rem;
+        justify-self: flex-end;
+        margin-top: auto;
+        &[data-hidden=true] {
+            display: none;
+        }
+    }
+    &-form {
+        display: none;
+        &[data-visible=true] {
+            @include cover();
+        }
+        &-fields {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}

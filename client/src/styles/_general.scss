@@ -1,0 +1,103 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    color: $black;
+    line-height: 1.4;
+    font-size: 17px;
+    font-weight: $normal;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(45deg, $white 0%, darken($white, 2.5%) 100%);
+    box-sizing: border-box;
+    overflow-x: hidden;
+    min-height: 100%;
+    display: flex;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+    background-color: $black;
+    color: $white;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+    font-weight: $bold;
+}
+
+h1 {
+    font-size: 1rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+p {
+    padding: 1rem;
+    text-align: center;
+    margin: 0 0 0.75rem;
+}
+.info {
+    color: $aqua;
+}
+.error {
+    color: $red;
+}
+.info, 
+.error {
+    font-size: 0.75rem;
+}
+
+a {
+    color: $aqua;
+    cursor: pointer;
+    transition: color $transition;
+    &:hover {
+        color: lighten($aqua, 10%);
+    }
+}
+
+input, 
+button {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+button {
+    cursor: pointer;
+    color: $white;
+    background-color: $aqua;
+    transition: background-color $transition;
+    &:not(:disabled):hover {
+        background-color: darken($aqua, 10%);
+    }
+    &:disabled {
+        cursor: initial;
+        filter: grayscale(1);
+    }
+}
+
+.logout {
+    font-size: 0.75rem;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}

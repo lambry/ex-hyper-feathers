@@ -1,0 +1,20 @@
+.signin {
+    &-form {
+        @include cover();
+        &-fields {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .channel-toggle {
+            margin-top: initial;
+        }
+        input, 
+        button {
+            width: 100%;
+            @media (min-width: $large) {
+                width: auto;
+            }
+        }
+    }
+}
